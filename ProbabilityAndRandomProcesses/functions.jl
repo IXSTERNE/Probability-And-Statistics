@@ -19,4 +19,18 @@ using Distributions
         end
         return array1
     end
+
+
+    # If p > randomNumber; The event has occured
+    function RandomSimulation(p, n)
+        array = rand(n)
+        countTrueEvent = 0
+        for randomNumber in array
+            if p > randomNumber
+                countTrueEvent = countTrueEvent + 1
+            end
+        end
+        return countTrueEvent / n
+    end
+
 end
