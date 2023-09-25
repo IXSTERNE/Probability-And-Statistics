@@ -1,4 +1,5 @@
 module BinomialEquation
+
 # Creating user function
     function BinomialDistributionUserFunction(n, p, x)
         q = 1 - p
