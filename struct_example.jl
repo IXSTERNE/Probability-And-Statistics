@@ -1,9 +1,7 @@
 using Distributions
 
 struct PdfBinomial
-# Honestly, think we can inherit functions?
 
-    #Specified types
     number_of_trials::Int64
     random_variable::Float64
 
@@ -21,7 +19,7 @@ struct PdfBinomial
         array1 = Float64[]
         _probability = Binomial(self.number_of_trials, self.random_variable)
         for random_variable in range
-            pmf = pdf(_probability, random_variable)
+            pmf = pdf(_probability, random_variable)                                               
             push!(array1, pmf)
         end
         return array1
